@@ -1,0 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<style>
+	footer {
+		background-color: #f0fff0;
+		text-align: center;
+		padding: 1rem;
+		margin-top: 60px;
+	}
+
+</style>
+
+<footer><address>CopyRight &copy; 한상철 김종민 이동현</address></footer>
