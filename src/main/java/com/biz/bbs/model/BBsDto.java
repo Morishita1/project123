@@ -25,6 +25,6 @@ public class BBsDto {
 	    private String bbs_content;		//	nVARCHAR2(1000)	
 	    
 	    private List<FileVO> bbs_files;
-	    private List<BBsVO> bbs_rep_list;
+	   
 	    
 }

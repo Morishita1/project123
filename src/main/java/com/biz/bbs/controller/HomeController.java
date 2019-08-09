@@ -40,8 +40,6 @@ public class HomeController {
 	public String home(Model model, HttpSession httpSession) {
 		
 		List<MenuDto> menuList = menuService.getDBMenu();
-		//model.addAttribute("MENUS",menuService.makeMenu());
-		//model.addAttribute("MENUS",menuList);
 		List<BBsDto> bbsList = bbsService.bbsListForFile();
 		model.addAttribute("LIST",bbsList);
 		List<BBsDto2> bbsList2 = bbsService2.bbsList();

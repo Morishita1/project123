@@ -72,7 +72,6 @@ public class MenuService {
 	
 	public List<MenuDto> makeMenu_2() {
 		
-		//List<MenuDto> menuList = new ArrayList<MenuDto>();
 		
 		MenuDto menuDto = new MenuDto();
 		menuDto.setMenu_title("홈");

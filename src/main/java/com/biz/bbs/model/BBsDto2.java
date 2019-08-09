@@ -24,6 +24,6 @@ public class BBsDto2 {
 	    private String bbs_title;		//	nVARCHAR2(255)	,
 	    private String bbs_content;		//	nVARCHAR2(1000)	
 	    
-	   private List<BBsVO> bbs_rep_list;
-	    
+	 
+	    private List<BBsVO> bbs_rep_list;
 }

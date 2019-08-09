@@ -24,11 +24,6 @@ public interface BBsDao2 {
 	})
 	public List<BBsDto2> selectAll();
 
-	/*
-	 * @SelectKey를 사용하여 insert 이전에 미리
-	 * bbs_seq 값을 생성해 두면
-	 * Service나 Controller에서 bbsVO로 부터 bbs_seq를 추출할수 있다.
-	 */
 	@InsertProvider(type = BBsSQL2.class, method = "bbs_insert_sql")
 	@SelectKey(keyProperty = "bbs_seq", statement = " SELECT SEQ_BBS.NEXTVAL FROM DUAL ", resultType = Long.class,before = true)
 	public int insert(BBsVO2 bbsVO);

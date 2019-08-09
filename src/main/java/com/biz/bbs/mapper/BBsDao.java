@@ -26,18 +26,12 @@ public interface BBsDao {
 	})
 	public List<BBsDto> selectAll();
 
-	/*
-	 * @SelectKey를 사용하여 insert 이전에 미리
-	 * bbs_seq 값을 생성해 두면
-	 * Service나 Controller에서 bbsVO로 부터 bbs_seq를 추출할수 있다.
-	 */
 	@InsertProvider(type = BBsSQL.class, method = "bbs_insert_sql")
 	@SelectKey(keyProperty = "bbs_seq", statement = " SELECT SEQ_BBS.NEXTVAL FROM DUAL ", resultType = Long.class,before = true)
 	public int insert(BBsVO bbsVO);
 
 	@Select(" SELECT * FROM tbl_bbs WHERE bbs_seq = #{bbs_seq} ")
 	public BBsVO findBySeq(long bbs_seq);
-	// file List까지 묶어서 확인을 위한 select
 		@Select(" SELECT * FROM tbl_bbs ORDER BY bbs_date DESC, bbs_time DESC ")
 		@Results(value = {
 				@Result(property = "bbs_seq", column = "bbs_seq"),
@@ -46,7 +40,6 @@ public interface BBsDao {
 	public List<BBsDto> selectAllForFile();
 	
 	
-	// file List까지 묶어서 확인을 위한 select
 	@Select(" SELECT * FROM tbl_bbs WHERE bbs_seq = #{bbs_seq} ")
 	@Results(value = {
 			@Result(property = "bbs_seq", column = "bbs_seq"),

@@ -4,19 +4,10 @@
 <script>
 
 </script>
-<style>
-	
-
-
-</style>
 
 
 
 <article class="grid">
-	<%
-	// 임의적인 반복문을 사용하는 forEach
-	//<c:forEach begin="0" end="20" step="1">
-	%>
 	<c:forEach items="${LIST}" var="BBS" begin="0" end="2">
 		<%@ include file="/WEB-INF/views/body/bbs/card2.jspf" %>
 	</c:forEach>

@@ -26,5 +26,5 @@ public class BBsVO2 {
 	    private String bbs_title;		//	nVARCHAR2(255)	,
 	    private String bbs_content;		//	nVARCHAR2(1000)	
 	    
-	    private List<MultipartFile> bbs_files;
+	  
 }

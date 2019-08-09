@@ -35,13 +35,7 @@
 				<img src = "${rootPath}/images/${BBS.bbs_files[1].file_name}" alt="${BBS.bbs_files[1].file_name}">
 			</div>			
 
-
-<%-- 			<c:forEach items="${BBS.bbs_files}" var="file">
-				<div class="thumn-box">
-					<img src = "${rootPath}/images/${file.file_name}" alt="${file.file_name}">
-				</div>			
-			</c:forEach>
- --%>			</div>
+		</div>
 		</td>
 	</tr>
 	</c:if>
@@ -65,7 +59,7 @@
 <script>
 $(function() {
 	$("#btn-delete").click(function() {
-		if(confirm("정말 삭제 할까요?")) {
+		if(confirm("삭제 하시겠습니까?")) {
 		location.replace('${rootPath}/bbs/delete?bbs_seq=${BBS.bbs_seq}')}
 	})
 	
